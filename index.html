@@ -6,6 +6,26 @@
     <title>My FrontEnd</title>
 </head>
 <body>
-    <h1>Hello from FrontEnd</h1>
+    <input id="todotask"></input>
+    <button onclick="addToList()">Add to list</button>
+    <br />
+    <div id="todo">
+        
+    </div>
+
+    <script>
+        function addToList() {
+            let task = document.getElementById('todotask');
+            let div = document.getElementById('todo');
+            div.innerHTML += `<h4>${task.value}</h4><br />`
+            task.value = "";
+        }
+    </script>
+    <style>
+        h4 {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
 </body>
 </html>
